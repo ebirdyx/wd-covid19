@@ -3,44 +3,32 @@ import './index.css';
 function Navbar() {
   return (
     <nav class="navbar">
-      <div class="logo">MUO</div>
+      <div class="logo">Covid-19 Health Advice</div>
       <ul class="nav-links">
         <input type="checkbox" id="checkbox_toggle" />
         <label for="checkbox_toggle" class="hamburger">
           &#9776;
         </label>
         <div class="menu">
-          <li>
-            <a href="/">Home</a>
-          </li>
-          <li>
-            <a href="/">About</a>
-          </li>
           <li class="services">
-            <a href="/">Services</a>
+            <a href="/">Wash Your Hands</a>
             <ul class="dropdown">
               <li>
-                <a href="/">Dropdown 1 </a>
+                <a href="/">Item 1 </a>
               </li>
               <li>
-                <a href="/">Dropdown 2</a>
+                <a href="/">Item 2</a>
               </li>
               <li>
-                <a href="/">Dropdown 2</a>
-              </li>
-              <li>
-                <a href="/">Dropdown 3</a>
-              </li>
-              <li>
-                <a href="/">Dropdown 4</a>
+                <a href="/">Item 3</a>
               </li>
             </ul>
           </li>
           <li>
-            <a href="/">Pricing</a>
+            <a href="/">Vacine</a>
           </li>
-          <li>
-            <a href="/">Contact</a>
+          <li class="">
+            <a href="/">Statistics</a>
           </li>
         </div>
       </ul>

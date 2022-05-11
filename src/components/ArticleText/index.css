@@ -1,0 +1,7 @@
+.list-tips li {
+  list-style-type: circle;
+}
+
+.list-tips {
+  padding-left: 40px;
+}
