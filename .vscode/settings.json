@@ -1,5 +1,9 @@
 {
-    "files.exclude": {
-        "**/node_modules": true
-    }
+  "files.exclude": {
+    "**/node_modules": true
+  },
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "files.autoSave": "onFocusChange",
+  "prettier.singleQuote": true
 }
