@@ -12,7 +12,7 @@ function Navbar() {
         <div class="menu">
           <li class="services">
             <a href="/">Wash Your Hands</a>
-            <ul class="dropdown">
+            {/* <ul class="dropdown">
               <li>
                 <a href="/">Item 1 </a>
               </li>
@@ -22,10 +22,10 @@ function Navbar() {
               <li>
                 <a href="/">Item 3</a>
               </li>
-            </ul>
+            </ul> */}
           </li>
           <li>
-            <a href="/">Vacine</a>
+            <a href="/vaccine">Vacine</a>
           </li>
           <li class="">
             <a href="/">Statistics</a>
