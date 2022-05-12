@@ -1,7 +1,13 @@
 import './index.css';
 
-function ArticleImage() {
-  return <img src="/images/kid_with_clean_hands.jpg" alt="" />;
+function ArticleImage({ myvar }) {
+  return (
+    <img
+      src={myvar.image.src}
+      alt={myvar.image.alt}
+      className="article_image"
+    />
+  );
 }
 
 export default ArticleImage;

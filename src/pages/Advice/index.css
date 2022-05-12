@@ -1,0 +1,10 @@
+.advice_page {
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.advice_page::content {
+  margin-bottom: 2em;
+}
