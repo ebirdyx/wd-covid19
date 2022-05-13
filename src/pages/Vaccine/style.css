@@ -1,0 +1,38 @@
+.vaccine_page {
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.vaccine_page::content {
+  margin-bottom: 2em;
+}
+
+.vaccine-h3 {
+  margin: 0.75em 0;
+}
+
+.vaccine-h1 {
+  margin: 1em 0;
+}
+
+.vaccine-h4 {
+  margin: 0.5em 0;
+}
+
+.vaccine-p {
+  margin: 0.5em 0;
+  padding: 0.5em 0;
+}
+
+.vaccine-ul {
+  padding-left: 1em;
+}
+
+.vaccine-li {
+  list-style: disc;
+}
+
+.vaccine-article {
+}
