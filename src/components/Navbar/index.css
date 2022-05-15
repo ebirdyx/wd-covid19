@@ -6,6 +6,18 @@
   background-color: #41393e;
   color: #fff;
 }
+
+.logo-nav {
+  width: 55px;
+  height: auto;
+  min-height: 12px;
+  margin-right: 20px;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
 .nav-links a {
   color: #41393e;
   background-color: #eef0f2;
