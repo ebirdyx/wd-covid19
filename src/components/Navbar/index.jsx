@@ -12,23 +12,12 @@ function Navbar() {
         <div class="menu">
           <li class="services">
             <a href="/">Wash Your Hands</a>
-            {/* <ul class="dropdown">
-              <li>
-                <a href="/">Item 1 </a>
-              </li>
-              <li>
-                <a href="/">Item 2</a>
-              </li>
-              <li>
-                <a href="/">Item 3</a>
-              </li>
-            </ul> */}
           </li>
           <li>
-            <a href="/vaccine">Vacine</a>
+            <a href="/vaccine">Vaccine</a>
           </li>
-          <li class="">
-            <a href="/">Statistics</a>
+          <li>
+            <a href="/stats">Statistics</a>
           </li>
         </div>
       </ul>
