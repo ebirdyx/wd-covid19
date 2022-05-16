@@ -1,0 +1,9 @@
+.graph-cards iframe {
+  border: 1px solid #033860;
+  height: 350px;
+}
+
+.graph-cards {
+  display: flex;
+  justify-content: center;
+}

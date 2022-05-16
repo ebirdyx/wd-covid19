@@ -2,6 +2,7 @@
   width: 60%;
   margin: 0 auto;
   display: flex;
+  background-color: rgb(223, 234, 243);
   flex-direction: column;
 }
 

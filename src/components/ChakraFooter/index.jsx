@@ -1,5 +1,8 @@
 import {
+  Image,
   Box,
+  Button,
+  ButtonGroup,
   chakra,
   Container,
   Link,
@@ -10,6 +13,7 @@ import {
 } from '@chakra-ui/react';
 import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
 import { ReactNode } from 'react';
+import { FcAssistant } from 'react-icons/fc';
 
 const Logo = (props) => {
   return (
@@ -57,10 +61,47 @@ const SocialButton = ({ children, label, href }) => {
 
 function ChakraFooter() {
   return (
-    <Box
-      bg={useColorModeValue('gray.50', 'gray.900')}
-      color={useColorModeValue('gray.700', 'gray.200')}
-    >
+    <Box bgGradient="linear(to-bl,#d3e1eb,#89b0cb)">
+      <Container
+        as={Stack}
+        maxW={'6xl'}
+        py={4}
+        spacing={40}
+        justify={'center'}
+        direction="row"
+        align={'center'}
+      >
+        <Stack spacing={4}>
+          <Text fontSize="3xl">Are you affected by Corona?</Text>
+          <Text color="gray.500" noOfLines={3}>
+            People with COVID-19 have reported a wide range of issues from mild
+            symptoms to severe illness. Symptoms may appear 2-14 days after
+            exposure to the virus. If you have fever, cough, or other symptoms,
+            you might have COVID-19.
+          </Text>
+          <Button
+            size="md"
+            height="48px"
+            width="150px"
+            border="2px"
+            borderColor="#8C5454"
+            leftIcon={<FcAssistant />}
+            bg="#ECEBE4"
+            variant="solid"
+          >
+            Contact us
+          </Button>
+        </Stack>
+
+        <Image
+          src="images\covid_symptoms_headache.jpg"
+          borderRadius="full"
+          boxSize="300px"
+          alt=" "
+          objectFit="cover"
+        />
+      </Container>
+
       <Container
         as={Stack}
         maxW={'6xl'}
@@ -92,7 +133,7 @@ function ChakraFooter() {
           justify={{ base: 'center', md: 'space-between' }}
           align={{ base: 'center', md: 'center' }}
         >
-          <Text>© 2022 Chakra Templates. All rights reserved</Text>
+          <Text>© 2022 | All rights reserved by Pamela Brahollari</Text>
           <Stack direction={'row'} spacing={6}>
             <SocialButton label={'Twitter'} href={'#'}>
               <FaTwitter />

@@ -35,7 +35,7 @@ function ChakraNavbar() {
       }}
     >
       <Flex
-        bg={useColorModeValue('white', 'gray.800')}
+        bg="#d3e1eb"
         color={useColorModeValue('gray.600', 'white')}
         minH={'60px'}
         py={{ base: 2 }}
@@ -74,6 +74,7 @@ function ChakraNavbar() {
           <Text
             textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
             fontFamily={'heading'}
+            fontSize={'xl'}
             color={useColorModeValue('gray.800', 'white')}
           >
             Covid19 Info
@@ -105,10 +106,11 @@ function ChakraNavbar() {
             fontSize={'sm'}
             fontWeight={600}
             color={'white'}
-            bg={'#41393e'}
+            bg={'#995666'}
             href={'#'}
             _hover={{
               bg: 'gray.300',
+              color: 'black',
             }}
           >
             Sign Up
@@ -137,7 +139,7 @@ const DesktopNav = () => {
               <Link
                 p={2}
                 href={navItem.href ?? '#'}
-                fontSize={'sm'}
+                fontSize={'md'}
                 fontWeight={500}
                 color={linkColor}
                 _hover={{
@@ -191,7 +193,7 @@ const DesktopSubNav = ({ label, href, subLabel }) => {
           >
             {label}
           </Text>
-          <Text fontSize={'sm'}>{subLabel}</Text>
+          <Text fontSize={'md'}>{subLabel}</Text>
         </Box>
         <Flex
           transition={'all .3s ease'}
