@@ -1,9 +1,11 @@
 import React from 'react';
+import ThreeColumnGrid from '../../components/ThreeColumnGrid';
 import './index.css';
 
 function Home() {
   return (
     <div>
+      <ThreeColumnGrid />
       <div className="article">
         <h2>
           Cororna Virus Disease is Infectuos, We should Avoid Close Contact

@@ -35,8 +35,9 @@ function ChakraNavbar() {
       }}
     >
       <Flex
-        bg="#d3e1eb"
-        color={useColorModeValue('gray.600', 'white')}
+        // bg="#d3e1eb"
+        bg="#035d71"
+        color="white"
         minH={'60px'}
         py={{ base: 2 }}
         px={{ base: 4 }}
@@ -61,6 +62,7 @@ function ChakraNavbar() {
         </Flex>
         <Flex
           flex={{ base: 1 }}
+          ml="5"
           align="center"
           justify={{ base: 'center', md: 'start' }}
         >
@@ -75,12 +77,12 @@ function ChakraNavbar() {
             textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
             fontFamily={'heading'}
             fontSize={'xl'}
-            color={useColorModeValue('gray.800', 'white')}
+            color="white"
           >
             Covid19 Info
           </Text>
 
-          <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
+          <Flex display={{ base: 'none', md: 'flex' }} ml={60}>
             <DesktopNav />
           </Flex>
         </Flex>
@@ -97,6 +99,7 @@ function ChakraNavbar() {
             fontWeight={400}
             variant={'link'}
             href={'#'}
+            color={'white'}
           >
             Sign In
           </Button>
@@ -126,7 +129,7 @@ function ChakraNavbar() {
 }
 
 const DesktopNav = () => {
-  const linkColor = useColorModeValue('gray.600', 'gray.200');
+  const linkColor = 'white';
   const linkHoverColor = useColorModeValue('gray.800', 'white');
   const popoverContentBgColor = useColorModeValue('white', 'gray.800');
 
@@ -140,7 +143,7 @@ const DesktopNav = () => {
                 p={2}
                 href={navItem.href ?? '#'}
                 fontSize={'md'}
-                fontWeight={500}
+                fontWeight={600}
                 color={linkColor}
                 _hover={{
                   textDecoration: 'none',
