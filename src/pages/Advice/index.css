@@ -1,8 +1,8 @@
 .advice_page {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   display: flex;
-  background-color: rgb(204, 229, 233);
+  /* background-color: rgb(204, 229, 233); */
   flex-direction: column;
 }
 

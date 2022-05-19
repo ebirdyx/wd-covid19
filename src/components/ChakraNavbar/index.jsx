@@ -129,9 +129,9 @@ function ChakraNavbar() {
 }
 
 const DesktopNav = () => {
-  const linkColor = 'white';
+  const linkColor = useColorModeValue('white.800', 'white');
   const linkHoverColor = useColorModeValue('gray.800', 'white');
-  const popoverContentBgColor = useColorModeValue('white', 'gray.800');
+  const popoverContentBgColor = useColorModeValue('gray.800', 'gray.800');
 
   return (
     <Stack direction={'row'} spacing={4}>
@@ -301,13 +301,13 @@ const NAV_ITEMS = [
     ],
   },
   {
-    label: 'Wash Your Hands',
-    href: '/',
+    label: 'Advice',
+    href: '/advice',
     children: [
       {
-        label: 'Job Board',
-        subLabel: 'Find your dream design job',
-        href: '#',
+        label: 'Hygiene',
+        subLabel: 'Wash your hands',
+        href: '/advice/1',
       },
       {
         label: 'Freelance Projects',

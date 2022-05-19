@@ -15,7 +15,7 @@ function App() {
       <ChakraNavbar />
       <Routes>
         <Route path="/home" element={<Home />} />
-        <Route path="/" element={<Advice />} />
+        <Route path="/advice" element={<Advice />} />
         <Route path="/stats" element={<Stats />} />
         <Route path="/vaccine" element={<Vaccine />} />
       </Routes>

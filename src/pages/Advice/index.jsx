@@ -1,7 +1,7 @@
 import ArticleImage from '../../components/ArticleImage';
 import ArticleText from '../../components/ArticleText';
 import './index.css';
-import { Flex } from '@chakra-ui/react';
+import { Flex, Box } from '@chakra-ui/react';
 
 function Advice() {
   const articles = [
@@ -22,7 +22,7 @@ function Advice() {
     },
     {
       image: {
-        src: '/images/steps_to_wash_hands.jpg',
+        src: '/images/wash_hands.jpg',
         alt: 'Washing hands in steps',
       },
       title: 'Key Times to Wash Hands',
@@ -59,8 +59,21 @@ function Advice() {
     <div className="advice_page">
       {articles.map((article) => (
         <Flex my="30px">
-          <ArticleImage myvar={article} />
-          <ArticleText myvar={article} />
+          <Box
+            // m={'1'}
+            bg="gray.800"
+            display="flex"
+            alignItems={'center'}
+            maxW="100%"
+            borderBlockStartStyle={'solid'}
+            borderColor="gray.800"
+            borderWidth="12px"
+            borderRadius="sm"
+            overflow="hidden"
+          >
+            <ArticleImage myvar={article} />
+            <ArticleText myvar={article} />
+          </Box>
         </Flex>
       ))}
     </div>

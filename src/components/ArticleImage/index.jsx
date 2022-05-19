@@ -1,11 +1,13 @@
-import './index.css';
+import { Image } from '@chakra-ui/react';
 
 function ArticleImage({ myvar }) {
   return (
-    <img
+    <Image
       src={myvar.image.src}
       alt={myvar.image.alt}
-      className="article_image"
+      mt="3em"
+      w="70%"
+      mr="2em"
     />
   );
 }

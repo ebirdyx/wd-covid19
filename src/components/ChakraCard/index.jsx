@@ -27,7 +27,7 @@ function ChakraCard() {
     >
       <Box w={'40%'}>
         <Text
-          fontFamily="lato"
+          fontFamily="Lato"
           border-block="1rem solid"
           writing-mode="horizontal-tb"
           direction="rtl"
@@ -108,7 +108,6 @@ function ChakraCard() {
 }
 const property = {
   Text: 'Get Vaccinated',
-  img: './images/contain_coronavirus.png',
 };
 
 export default ChakraCard;
