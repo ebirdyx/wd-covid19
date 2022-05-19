@@ -5,3 +5,9 @@
 .list-tips {
   padding-left: 40px;
 }
+
+.article_text h2 {
+  font-size: 2em;
+  font-weight: 500;
+  font-family: 'Lato', sans-serif;
+}

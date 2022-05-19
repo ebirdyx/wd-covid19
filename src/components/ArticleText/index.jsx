@@ -2,7 +2,7 @@ import './index.css';
 
 function ArticleText({ myvar }) {
   return (
-    <div>
+    <div className="article_text">
       <h2>{myvar.title}</h2>
       <p>{myvar.paragraph}</p>
       <ul className="list-tips">

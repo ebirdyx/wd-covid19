@@ -1,6 +1,7 @@
 import ArticleImage from '../../components/ArticleImage';
 import ArticleText from '../../components/ArticleText';
 import './index.css';
+import { Flex } from '@chakra-ui/react';
 
 function Advice() {
   const articles = [
@@ -57,10 +58,10 @@ function Advice() {
   return (
     <div className="advice_page">
       {articles.map((article) => (
-        <div>
+        <Flex my="30px">
           <ArticleImage myvar={article} />
           <ArticleText myvar={article} />
-        </div>
+        </Flex>
       ))}
     </div>
   );

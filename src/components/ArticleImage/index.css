@@ -1,4 +1,6 @@
 .article_image {
   /* justify-items: center; */
   margin-top: 3em;
+  width: 300px;
+  margin-right: 20px;
 }
