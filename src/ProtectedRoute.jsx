@@ -11,7 +11,13 @@ function ProtectedRoute() {
     return <Navigate to="/signin" />;
   }
 
-  return <Outlet />;
+  return (
+    <>
+      <ChakraNavbar />
+      <Outlet />
+      <ChakraFooter />
+    </>
+  );
 }
 
 export default ProtectedRoute;

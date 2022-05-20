@@ -1,5 +1,12 @@
 import {
   Image,
+  Menu,
+  MenuButton,
+  MenuItem,
+  MenuDivider,
+  MenuList,
+  Center,
+  Avatar,
   Box,
   Flex,
   Text,
@@ -22,9 +29,24 @@ import {
   ChevronDownIcon,
   ChevronRightIcon,
 } from '@chakra-ui/icons';
+import { signout } from '../../store/authSlice';
+import { useNavigate } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
 
 function ChakraNavbar() {
   const { isOpen, onToggle } = useDisclosure();
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const onSignOut = (event) => {
+    event.preventDefault();
+    dispatch(signout());
+    navigate('/signin');
+  };
+
+  const fullname = useSelector((state) => state.auth.user.fullname);
+  const username = useSelector((state) => state.auth.user.username);
+  const avatarUrl = `https://avatars.dicebear.com/api/pixel-art/${username}.svg`;
 
   return (
     <Box
@@ -94,14 +116,13 @@ function ChakraNavbar() {
           spacing={6}
         >
           <Button
-            as={'a'}
+            onClick={onSignOut}
             fontSize={'sm'}
             fontWeight={400}
             variant={'link'}
-            href={'#'}
             color={'white'}
           >
-            Sign In
+            Sign Out
           </Button>
           <Button
             as={'a'}
@@ -118,6 +139,32 @@ function ChakraNavbar() {
           >
             Sign Up
           </Button>
+          <Menu>
+            <MenuButton
+              as={Button}
+              rounded={'full'}
+              variant={'link'}
+              cursor={'pointer'}
+              minW={0}
+            >
+              <Avatar size={'sm'} src={avatarUrl} />
+            </MenuButton>
+            <MenuList alignItems={'center'} color="gray.800">
+              <br />
+              <Center>
+                <Avatar size={'2xl'} src={avatarUrl} />
+              </Center>
+              <br />
+              <Center>
+                <p>{fullname}</p>
+              </Center>
+              <br />
+              <MenuDivider />
+              <MenuItem>Your Servers</MenuItem>
+              <MenuItem>Account Settings</MenuItem>
+              <MenuItem>Logout</MenuItem>
+            </MenuList>
+          </Menu>
         </Stack>
       </Flex>
 
