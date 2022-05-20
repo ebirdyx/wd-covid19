@@ -115,30 +115,6 @@ function ChakraNavbar() {
           direction={'row'}
           spacing={6}
         >
-          <Button
-            onClick={onSignOut}
-            fontSize={'sm'}
-            fontWeight={400}
-            variant={'link'}
-            color={'white'}
-          >
-            Sign Out
-          </Button>
-          <Button
-            as={'a'}
-            display={{ base: 'none', md: 'inline-flex' }}
-            fontSize={'sm'}
-            fontWeight={600}
-            color={'white'}
-            bg={'#995666'}
-            href={'#'}
-            _hover={{
-              bg: 'gray.300',
-              color: 'black',
-            }}
-          >
-            Sign Up
-          </Button>
           <Menu>
             <MenuButton
               as={Button}
@@ -160,9 +136,11 @@ function ChakraNavbar() {
               </Center>
               <br />
               <MenuDivider />
-              <MenuItem>Your Servers</MenuItem>
+              <MenuItem>Profile</MenuItem>
               <MenuItem>Account Settings</MenuItem>
-              <MenuItem>Logout</MenuItem>
+              <MenuItem onClick={onSignOut} as="button">
+                Sign Out
+              </MenuItem>
             </MenuList>
           </Menu>
         </Stack>
