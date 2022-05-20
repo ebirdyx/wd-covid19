@@ -1,6 +1,7 @@
 import {
   Button,
   Checkbox,
+  Text,
   Flex,
   FormControl,
   FormLabel,
@@ -10,6 +11,7 @@ import {
   Stack,
   Image,
 } from '@chakra-ui/react';
+import { ExternalLinkIcon } from '@chakra-ui/icons';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { signin } from '../../store/authSlice';
@@ -46,11 +48,11 @@ export default function SignIn() {
       <Flex p={8} flex={1} align={'center'} justify={'center'}>
         <Stack spacing={4} w={'full'} maxW={'md'}>
           <Heading fontSize={'2xl'}>Sign in to your account</Heading>
-          <FormControl id="username">
+          <FormControl id="username" isRequired>
             <FormLabel>Username</FormLabel>
             <Input type="username" onChange={onUsernameChange} />
           </FormControl>
-          <FormControl id="password">
+          <FormControl id="password" isRequired>
             <FormLabel>Password</FormLabel>
             <Input type="password" onChange={onPasswordChange} />
           </FormControl>
@@ -64,6 +66,13 @@ export default function SignIn() {
               Sign in
             </Button>
           </Stack>
+          <Link
+            href="/signup"
+
+            // _hover={}
+          >
+            Not registered yet <ExternalLinkIcon mx="2px" />
+          </Link>
         </Stack>
       </Flex>
       <Flex flex={1}>

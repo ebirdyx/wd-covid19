@@ -16,16 +16,48 @@ import {
 } from '@chakra-ui/react';
 import { useState } from 'react';
 import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
+import { useDispatch } from 'react-redux';
+import { signup } from '../../store/authSlice';
+import { useNavigate } from 'react-router-dom';
 
 export default function Signup() {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [fullname, setFullname] = useState('');
+  const [email, setEmail] = useState('');
+
   const [showPassword, setShowPassword] = useState(false);
+
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const onFullnameChange = (event) => {
+    setFullname(event.target.value);
+  };
+
+  const onEmailChange = (event) => {
+    setEmail(event.target.value);
+  };
+  const onUsernameChange = (event) => {
+    setUsername(event.target.value);
+  };
+
+  const onPasswordChange = (event) => {
+    setPassword(event.target.value);
+  };
+
+  const onSubmit = (event) => {
+    event.preventDefault();
+    dispatch(signup({ username, password, fullname, email }));
+    navigate('/signin');
+  };
 
   return (
     <Flex
       minH={'100vh'}
       align={'center'}
       justify={'center'}
-      bg={useColorModeValue('gray.50', 'gray.800')}
+      bg={useColorModeValue('gray.400', 'gray.800')}
     >
       <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
         <Stack align={'center'}>
@@ -33,38 +65,42 @@ export default function Signup() {
             Sign up
           </Heading>
           <Text fontSize={'lg'} color={'gray.600'}>
-            to enjoy all of our cool features ✌️
+            to read all of our cool advice ✌️
           </Text>
         </Stack>
         <Box
           rounded={'lg'}
-          bg={useColorModeValue('white', 'gray.700')}
+          color="white"
+          bg={useColorModeValue('gray.800', 'gray.700')}
           boxShadow={'lg'}
           p={8}
         >
           <Stack spacing={4}>
             <HStack>
               <Box>
-                <FormControl id="firstName" isRequired>
-                  <FormLabel>First Name</FormLabel>
-                  <Input type="text" />
+                <FormControl id="fullname" isRequired>
+                  <FormLabel>Full name</FormLabel>
+                  <Input type="text" onChange={onFullnameChange} />
                 </FormControl>
               </Box>
               <Box>
-                <FormControl id="lastName">
-                  <FormLabel>Last Name</FormLabel>
-                  <Input type="text" />
+                <FormControl id="username" isRequired>
+                  <FormLabel>Username</FormLabel>
+                  <Input type="text" onChange={onUsernameChange} />
                 </FormControl>
               </Box>
             </HStack>
             <FormControl id="email" isRequired>
               <FormLabel>Email address</FormLabel>
-              <Input type="email" />
+              <Input type="email" onChange={onEmailChange} />
             </FormControl>
             <FormControl id="password" isRequired>
               <FormLabel>Password</FormLabel>
               <InputGroup>
-                <Input type={showPassword ? 'text' : 'password'} />
+                <Input
+                  type={showPassword ? 'text' : 'password'}
+                  onChange={onPasswordChange}
+                />
                 <InputRightElement h={'full'}>
                   <Button
                     variant={'ghost'}
@@ -79,9 +115,10 @@ export default function Signup() {
             </FormControl>
             <Stack spacing={10} pt={2}>
               <Button
+                onClick={onSubmit}
                 loadingText="Submitting"
                 size="lg"
-                bg={'blue.400'}
+                bg={'blue.300'}
                 color={'white'}
                 _hover={{
                   bg: 'blue.500',
@@ -92,7 +129,10 @@ export default function Signup() {
             </Stack>
             <Stack pt={6}>
               <Text align={'center'}>
-                Already a user? <Link color={'blue.400'}>Login</Link>
+                Already a user?{' '}
+                <Link href="/signin" color={'blue.400'}>
+                  Sign in
+                </Link>
               </Text>
             </Stack>
           </Stack>

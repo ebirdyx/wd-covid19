@@ -125,7 +125,7 @@ function ChakraNavbar() {
             >
               <Avatar size={'sm'} src={avatarUrl} />
             </MenuButton>
-            <MenuList alignItems={'center'} color="gray.800">
+            <MenuList alignItems={'center'} bg="#035d71" color="white">
               <br />
               <Center>
                 <Avatar size={'2xl'} src={avatarUrl} />
@@ -155,7 +155,7 @@ function ChakraNavbar() {
 
 const DesktopNav = () => {
   const linkColor = useColorModeValue('white.800', 'white');
-  const linkHoverColor = useColorModeValue('gray.800', 'white');
+  const linkHoverColor = useColorModeValue('gray.800');
   const popoverContentBgColor = useColorModeValue('gray.800', 'gray.800');
 
   return (
@@ -314,13 +314,13 @@ const NAV_ITEMS = [
     href: '/home',
     children: [
       {
-        label: 'Explore Design Work',
-        subLabel: 'Trending Design to inspire you',
+        label: 'Prevention',
+        subLabel: 'Check out article with prevention tips',
         href: '#',
       },
       {
-        label: 'New & Noteworthy',
-        subLabel: 'Up-and-coming Designers',
+        label: 'Covid19 News',
+        subLabel: 'Reference to external news',
         href: '#',
       },
     ],
@@ -335,8 +335,8 @@ const NAV_ITEMS = [
         href: '/advice/1',
       },
       {
-        label: 'Freelance Projects',
-        subLabel: 'An exclusive list for contract work',
+        label: 'Covid-19 Symptoms',
+        subLabel: 'Understand symptoms ',
         href: '#',
       },
     ],
