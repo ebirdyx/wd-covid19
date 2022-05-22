@@ -84,7 +84,7 @@ function ChakraFooter() {
         </Stack>
         <Stack
           display="flex"
-          w="xl"
+          // w="xl"
           // h="180px"
           bg="#995666"
         >
@@ -100,14 +100,14 @@ function ChakraFooter() {
         </Stack>
       </Container>
 
-      <Container
+      {/* <Container
         as={Stack}
         maxW={'6xl'}
         py={4}
         spacing={4}
         justify={'center'}
         align={'center'}
-      ></Container>
+      ></Container> */}
 
       <Box
         borderTopWidth={1}

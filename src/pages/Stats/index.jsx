@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import './style.css';
-import { Spinner } from '@chakra-ui/react';
+import { Spinner, Box } from '@chakra-ui/react';
 
 function Stats() {
   const api_key = '7a7c7857f30e4be4991fd88e95348433';
@@ -36,7 +36,11 @@ function Stats() {
   // }
 
   return (
-    <div>
+    <Box
+      display={{
+        base: '',
+      }}
+    >
       <div className="graph-cards">
         <iframe
           src="https://public.domo.com/cards/avnAV"
@@ -93,7 +97,7 @@ function Stats() {
           frameborder="0"
         ></iframe>
       </div>
-    </div>
+    </Box>
   );
 }
 

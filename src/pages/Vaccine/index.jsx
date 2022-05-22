@@ -67,9 +67,20 @@ function Vaccine() {
           </li>
           <li className="vaccine-li">SinoVac vaccine</li>
         </ul>
+        <Center display={{ lg: 'none', base: 'flex' }}>
+          <iframe
+            width="745"
+            height="419"
+            src="https://www.youtube.com/embed/lFjIVIIcCvc"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </Center>
         <Box
-          m={'0.5em 3em'}
-          display="flex"
+          m="0.5em 3em"
+          display={{ base: 'none', lg: 'flex' }}
           alignItems="center"
           w="90%"
           color={'white'}

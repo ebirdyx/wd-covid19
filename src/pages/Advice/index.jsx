@@ -62,7 +62,10 @@ function Advice() {
           <Box
             // m={'1'}
             bg="gray.800"
-            display="flex"
+            display={{
+              base: 'block',
+              lg: 'flex',
+            }}
             alignItems={'center'}
             maxW="100%"
             borderBlockStartStyle={'solid'}
