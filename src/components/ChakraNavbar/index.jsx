@@ -125,7 +125,7 @@ function ChakraNavbar() {
             >
               <Avatar size={'sm'} src={avatarUrl} />
             </MenuButton>
-            <MenuList alignItems={'center'} bg="#035d71" color="white">
+            <MenuList alignItems={'center'} bg="white" color="gray.800">
               <br />
               <Center>
                 <Avatar size={'2xl'} src={avatarUrl} />

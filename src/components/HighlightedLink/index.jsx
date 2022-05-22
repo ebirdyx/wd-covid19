@@ -1,10 +1,13 @@
+import { Center } from '@chakra-ui/react';
 import './style.css';
 
 function HighlightedLink({ href, text }) {
   return (
-    <a className="highlighted-link" href={href}>
-      {text}
-    </a>
+    <Center>
+      <a className="highlighted-link" href={href}>
+        {text}
+      </a>
+    </Center>
   );
 }
 

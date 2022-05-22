@@ -22,7 +22,10 @@ function ChakraGrid() {
       <Box
         bg={'gray.800'}
         m={'2'}
-        display="flex"
+        display={{
+          base: 'block',
+          lg: 'flex',
+        }}
         alignItems="center"
         maxW="100%"
         borderBlockEndColor={'red.200'}
@@ -30,7 +33,7 @@ function ChakraGrid() {
         borderRadius="sm"
         overflow="hidden"
       >
-        <Box w={'50%'} ml="3em">
+        <Box w={{ base: '25em', lg: '40%' }} ml="3em">
           <Text
             fontFamily="Roboto"
             border-block="1rem solid"
@@ -62,7 +65,10 @@ function ChakraGrid() {
         </Box>
 
         <Box
-          w={'40%'}
+          w={{
+            base: '25em',
+            lg: '40%',
+          }}
           bg={'gray.800'}
           m={'2'}
           borderBlockStartColor={'#ebf5f6'}
@@ -75,7 +81,7 @@ function ChakraGrid() {
       </Box>
 
       <Grid
-        templateColumns="repeat(2, 1fr)"
+        templateColumns={{ base: 'repeat(1, 1fr)', lg: 'repeat(2, 1fr)' }}
         gap="2"
         mx="50px"
         my="30px"

@@ -51,12 +51,15 @@ function ChakraFooter() {
         py={4}
         spacing={40}
         justify={'center'}
-        direction="row"
+        direction={{
+          base: 'column',
+          lg: 'row',
+        }}
         align={'center'}
       >
         <Stack spacing={4} backdropBlur="base">
           <Text fontFamily="EB Garamond,serif" fontSize="3xl">
-            Are you affected by Corona?
+            Are you infected by Corona?
           </Text>
           <Text color="gray.500" noOfLines={3}>
             People with COVID-19 have reported a wide range of issues from mild
@@ -65,6 +68,8 @@ function ChakraFooter() {
             you might have COVID-19.
           </Text>
           <Button
+            as={'a'}
+            href="/contact"
             size="md"
             height="48px"
             width="150px"
@@ -77,12 +82,18 @@ function ChakraFooter() {
             Contact us
           </Button>
         </Stack>
-        <Stack display="flex" w="xl" h="180px" bg="#995666">
+        <Stack
+          display="flex"
+          w="xl"
+          // h="180px"
+          bg="#995666"
+        >
           <Image
             src="images\covid_symptoms_headache.jpg"
             borderRadius="12px"
             border="6px dotted #059bbd"
-            boxSize="250px"
+            // boxSize="250px"
+            height="12em"
             alt=" "
             objectFit="cover"
           />

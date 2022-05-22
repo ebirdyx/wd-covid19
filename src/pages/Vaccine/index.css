@@ -1,7 +1,10 @@
 .vaccine_page {
-  width: 60%;
+  padding: 0 10px;
+  width: 70%;
+  font-family: Roboto;
   margin: 0 auto;
   display: flex;
+  background-color: #dee8ea;
   flex-direction: column;
 }
 
@@ -11,14 +14,20 @@
 
 .vaccine-h3 {
   margin: 0.75em 0;
+  font-size: 1.75em;
 }
 
 .vaccine-h1 {
   margin: 1em 0;
+  font-size: 2.5em;
+  font-family: Lato;
 }
 
-.vaccine-h4 {
+h4.vaccine-h4 {
   margin: 0.5em 0;
+  color: #cae2e7;
+  font-size: 2em;
+  font-family: Lato;
 }
 
 .vaccine-p {
@@ -32,7 +41,4 @@
 
 .vaccine-li {
   list-style: disc;
-}
-
-.vaccine-article {
 }

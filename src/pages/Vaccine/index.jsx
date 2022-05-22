@@ -1,16 +1,20 @@
+import { Center, Box, Text } from '@chakra-ui/react';
 import HighlightedLink from '../../components/HighlightedLink';
-import './style.css';
+import { ArrowRightIcon } from '@chakra-ui/icons';
+import './index.css';
 
 function Vaccine() {
   return (
     <div className="vaccine_page">
       <div className="vaccine-article">
-        <h1 className="vaccine-h1">Coronavirus (COVID-19) vaccine</h1>
+        <Center>
+          <h1 className="vaccine-h1">Coronavirus (COVID-19) vaccine</h1>
+        </Center>
         <p className="vaccine-p">
           The coronavirus (COVID-19) vaccines are safe and effective. They give
           you the best protection against COVID-19.
         </p>
-        <h4 className="vaccine-h4">Who can get a COVID-19 vaccine</h4>
+        <h4 className="vaccine-h3">Who can get a COVID-19 vaccine</h4>
         <p className="vaccine-p">
           Everyone aged 5 and over can get a 1st and 2nd dose of the COVID-19
           vaccine.
@@ -29,6 +33,19 @@ function Vaccine() {
           people, and people aged 12 and over who have a weakened immune system,
           will be offered a spring booster.
         </p>
+        <Center>
+          <iframe
+            width="745"
+            height="419"
+            src="https://www.youtube.com/embed/OC9vnISihKM"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </Center>
+
+        <div className="link-divider"></div>
 
         <HighlightedLink
           href="https://covid19.trackvaccines.org/country/albania/"
@@ -50,7 +67,38 @@ function Vaccine() {
           </li>
           <li className="vaccine-li">SinoVac vaccine</li>
         </ul>
-        <h4 className="vaccine-h4">Which vaccine will I get?</h4>
+        <Box
+          m={'0.5em 3em'}
+          display="flex"
+          alignItems="center"
+          w="90%"
+          color={'white'}
+          bg={'gray.800'}
+          borderColor="white"
+          borderWidth="10px"
+          borderRadius="sm"
+          // overflow="hidden"
+        >
+          <Text margin="0.5em 0" font-size="6em" font-family="Lato">
+            <ArrowRightIcon
+              color="linear(to-l, #7928CA, #FF0080)"
+              w={6}
+              h={6}
+              ml="2em"
+              mr="0.5em"
+            />
+          </Text>
+          <h4 className="vaccine-h4">Which vaccine should I get?</h4>
+          <iframe
+            width="736"
+            height="439"
+            src="https://www.youtube.com/embed/lFjIVIIcCvc"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </Box>
         <p className="vaccine-p">
           You cannot usually choose which vaccine you have. If you book online,
           you'll only be offered appointments for vaccines that are suitable for

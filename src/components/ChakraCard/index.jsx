@@ -18,14 +18,17 @@ function ChakraCard() {
   return (
     <Box
       m={'2'}
-      display="flex"
+      display={{
+        base: 'block',
+        lg: 'flex',
+      }}
       alignItems="center"
-      maxW="100%"
+      width="100%"
       borderWidth="1px"
       borderRadius="sm"
       overflow="hidden"
     >
-      <Box w={'40%'}>
+      <Box w={'25em'}>
         <Text
           fontFamily="Lato"
           border-block="1rem solid"
@@ -47,7 +50,7 @@ function ChakraCard() {
         </Text>
       </Box>
       <Image
-        w={'40%'}
+        w={'25em'}
         margin="0.2em 0"
         // width="460px"
         height="400px"
@@ -70,24 +73,17 @@ function ChakraCard() {
           </Badge>
           <Box>
             <Stack ml="30px" mr="102px">
-              <Link color="teal.500" href="#">
+              <Link color="#035d71" href="#" textDecoration={'underline'}>
                 Long COVID or Post-COVID Conditions
               </Link>
-              <Divider
-                borderColor={'#035d71'}
-                size="5"
-                orientation="horizontal"
-              />
 
-              <Link color="teal.500" href="#">
+              <Link color="#035d71" href="#" textDecoration={'underline'}>
                 Quarantine | Isolation
               </Link>
-              <Divider borderColor={'#035d71'} orientation="horizontal" />
 
-              <Link color="teal.500" href="#">
+              <Link color="#035d71" href="#" textDecoration={'underline'}>
                 PREVENT GETTING SICK
               </Link>
-              <Divider borderColor={'#035d71'} orientation="horizontal" />
             </Stack>
           </Box>
         </Box>

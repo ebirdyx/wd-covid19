@@ -57,14 +57,14 @@ export default function Signup() {
       minH={'100vh'}
       align={'center'}
       justify={'center'}
-      bg={useColorModeValue('gray.400', 'gray.800')}
+      bgImg="/images/covid_tools.jpg"
     >
       <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
         <Stack align={'center'}>
           <Heading fontSize={'4xl'} textAlign={'center'}>
             Sign up
           </Heading>
-          <Text fontSize={'lg'} color={'gray.600'}>
+          <Text fontSize={'lg'} color={'#627sh2'}>
             to read all of our cool advice ✌️
           </Text>
         </Stack>
